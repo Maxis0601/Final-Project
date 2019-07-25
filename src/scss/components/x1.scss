@@ -1,0 +1,13 @@
+.x1 {
+	border: 1px solid $c1;
+	
+	&:before {
+		content: '';
+		color: $c2;
+	}
+	
+	&:after {
+		content: '';
+		color: $c1;
+	}
+}
