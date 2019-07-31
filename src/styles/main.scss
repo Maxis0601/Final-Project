@@ -1,0 +1,18 @@
+//base settings
+@import 'base/fonts';
+@import 'base/normalize';
+@import 'base/vars';
+@import 'base/body-element';
+
+@import 'leyout/grid';
+
+@import 'modules/header';
+@import 'modules/footer';
+
+
+
+//page settings
+@import 'site/site';
+@import "register/register";
+@import 'admin/admin';
+@import 'account/account';

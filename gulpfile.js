@@ -3,19 +3,16 @@ const $autoprefixer = require( 'gulp-autoprefixer' );
 const $cssmin = require( 'gulp-cssmin' );
 const $rename = require( 'gulp-rename' );
 const $sass = require( 'gulp-sass' );
-const $sourcemaps = require('gulp-sourcemaps');
 const {
     dest: $trg,
-    parallel: $parallel,
-    series:$series,
+    series: $series,
     src: $src,
     task: $task,
     watch: $watch
 } = $gulp;
 
-$task( 'scss:init', () =>
-    $src( 'src/scss/styles.scss' )
-        .pipe( $sourcemaps.init() )
+$task( 'styles:init', () =>
+    $src( 'src/styles/main.scss' )
         .pipe( $sass().on('error', $sass.logError) )
         .pipe( $autoprefixer({
             overrideBrowserslist: ['last 2 versions'],
@@ -23,13 +20,12 @@ $task( 'scss:init', () =>
         }))
         .pipe( $cssmin() )
         .pipe( $rename({suffix: '.min'}) )
-        .pipe( $sourcemaps.write() )
-        .pipe( $trg( 'public/' ) )
+        .pipe( $trg( 'public/css/' ) )
 );
 
-$task( 'scss:watch', () =>
-    $watch( 'src/scss/**/*.scss', $series( 'scss:init' ) )
+$task( 'styles:watch', () =>
+    $watch( 'src/styles/**/*.scss', $series( 'styles:init' ) )
 );
 
-$task( 'scss', $series( 'scss:init', 'scss:watch' ) );
+$task( 'scss', $series( 'styles:init', 'styles:watch' ) );
 
