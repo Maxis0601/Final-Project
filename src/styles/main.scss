@@ -1,15 +1,5 @@
-//base settings
-@import 'base/fonts';
-@import 'base/normalize';
-@import 'base/vars';
-@import 'base/body-element';
-
-@import 'leyout/grid';
-
-@import 'modules/header';
-@import 'modules/footer';
-
-
+//basic settings
+@import 'basic-settings/basic-settings';
 
 //page settings
 @import 'site/site';
