@@ -6,35 +6,98 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>TaskTrackingSystem</title>
-    <link rel="stylesheet" href="/css/main.min.css">
+    <link rel="stylesheet" href="/styles/main.min.css">
 </head>
 <body class="body">
-    <header id="registerHeader" class="header">
-        <div class="container">
-            <div class="row">
-                <div class="logo">
-                    Logo
+    <div class="wrapper">
+        <header id="registerHeader" class="header">
+            <div class="container">
+                <div class="row">
+                    <div class="logo">
+                        Logo
+                    </div>
+                    <ul class="menuRegister">
+                        <li class="menuRegister__item active" >
+                            <span rel="tab-1">Register</span>
+                        </li>
+                        <li class="menuRegister__item">
+                            <span rel="tab-2">LogIn</span>
+                        </li>
+                    </ul>
                 </div>
-                <ul class="menuRegister">
-                    <li class="menuRegister__item active" >
-
-                    </li>
-                    <li class="menuRegister__item">
-
-                    </li>
-                </ul>
             </div>
-        </div>
-    </header>
-    <section>
-        <div class="container">
-            sd
-        </div>
-    </section>
-    <footer id="registerFooter" class="footer">
-        <div class="container">
+        </header>
+        <section class="registerSection">
+            <div class="container">
+                <div class="registerContent">
+                    <div class="registerContent__item active" id="tab-1">
+                        <h2>Register</h2>
+                        <form action="#" class="registerForm" method="POST">
+                            <div class="registerForm__group">
+                                <label for="firstname">
+                                    <span class="registerForm__group registerForm__group_text_danger">*</span>
+                                    First Name
+                                </label>
+                                <input id="firstname" class="registerForm__input" type="text" placeholder="Enter name..."/>
+                            </div>
+                            <div class="registerForm__group">
+                                <label for="yourlogin">
+                                    <span class="registerForm__group registerForm__group_text_danger">*</span>
+                                    Login
+                                </label>
+                                <input id="yourlogin" class="registerForm__input" type="text" placeholder="Enter login..."/>
+                            </div>
+                            <div class="registerForm__group">
+                                <label for="password">
+                                    <span class="registerForm__group registerForm__group_text_danger">*</span>
+                                    Password
+                                </label>
+                                <input id="password" class="registerForm__input" type="password" placeholder="Enter password...">
+                            </div>
+                            <div class="registerForm__group">
+                                <button type="submit">Register</button>
+                            </div>
 
-        </div>
-    </footer>
+
+                        </form>
+                    </div>
+                    <div class="registerContent__item" id="tab-2">
+                        <form action="#" class="authorizationForm" method="POST">
+                            <input type="text" placeholder="Enter login..."/>
+                            <input type="password" placeholder="Enter password...">
+                            <button>Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <div class="container">
+                <div class="row">
+                    <p>2019 Copyright Task Tracking System</p>
+                    <ul class="network">
+                        <li class="network__item">
+                            <a href="#" class="network__link">F</a>
+                        </li>
+                        <li class="network__item">
+                            <a href="#" class="network__link">I</a>
+                        </li>
+                        <li class="network__item">
+                            <a href="#" class="network__link">T</a>
+                        </li>
+                        <li class="network__item">
+                            <a href="#" class="network__link">Ln</a>
+                        </li>
+                        <li class="network__item">
+                            <a href="#" class="network__link">GH</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <script src="/scripts/script.min.js"></script>
 </body>
 </html>

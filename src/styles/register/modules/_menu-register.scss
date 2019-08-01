@@ -1,0 +1,10 @@
+.menuRegister {
+    display: flex;
+    &__item {
+        margin-right: $margin;
+        &:last-child{
+           margin: 0;
+        }
+    }
+}
+
