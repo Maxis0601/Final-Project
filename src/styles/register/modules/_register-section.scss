@@ -1,35 +1,44 @@
 .registerSection {
-    height: 85%
+    height: 85%;
 }
 
-.registerContent__item {
-  	display: none;
-  	h2 {
-	  text-align: center;
+.registerContent {
+  	padding: $padding*3;
+  	&__item {
+		display: none;
+		h2 {
+		  	text-align: center;
+		  	padding-bottom: $padding;
+		}
 	}
-}
-
-.registerContent__item.active {
-  display: block;
+  	&__item.active {
+	  display: block;
+	}
 }
 
 .registerForm {
-  	display: block;
-  	background: $white;
-  	border: 1px solid $grey;
-  	padding: $padding;
   	width: 30%;
-  	margin: 0 auto;
   	&__group{
-	  	width: 100%;
 	  	&_text_danger {
 		  	color: $red;
 		}
-
 	}
   	&__input {
-	  	display: block;
+	  	width: 93%;
+	}
+  	&__button {
 	  	width: 100%;
-	  	margin-bottom: $margin/2;
+	  	background: $light-blue;
+	}
+}
+
+.authorizationForm {
+	width: 30%;
+	&__input {
+		  width: 93%;
+	}
+	&__button {
+		width: 100%;
+		background: $light-green;
 	}
 }

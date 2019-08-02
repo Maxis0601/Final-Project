@@ -17,10 +17,10 @@
                         Logo
                     </div>
                     <ul class="menuRegister">
-                        <li class="menuRegister__item active" >
+                        <li class="menuRegister__item" >
                             <span rel="tab-1">Register</span>
                         </li>
-                        <li class="menuRegister__item">
+                        <li class="menuRegister__item active">
                             <span rel="tab-2">LogIn</span>
                         </li>
                     </ul>
@@ -30,42 +30,60 @@
         <section class="registerSection">
             <div class="container">
                 <div class="registerContent">
-                    <div class="registerContent__item active" id="tab-1">
+                    <div class="registerContent__item" id="tab-1">
                         <h2>Register</h2>
-                        <form action="#" class="registerForm" method="POST">
+                        <form action="#" class="registerForm form">
                             <div class="registerForm__group">
                                 <label for="firstname">
                                     <span class="registerForm__group registerForm__group_text_danger">*</span>
                                     First Name
                                 </label>
-                                <input id="firstname" class="registerForm__input" type="text" placeholder="Enter name..."/>
+                                <input id="firstname" class="registerForm__input input" type="text" placeholder="Enter first name..." required />
+                            </div>
+                            <div class="registerForm__group">
+                                <label for="secondname">
+                                    Second Name
+                                </label>
+                                <input id="secondname" class="registerForm__input input" type="text" placeholder="Enter second name..." />
                             </div>
                             <div class="registerForm__group">
                                 <label for="yourlogin">
                                     <span class="registerForm__group registerForm__group_text_danger">*</span>
                                     Login
                                 </label>
-                                <input id="yourlogin" class="registerForm__input" type="text" placeholder="Enter login..."/>
+                                <input id="yourlogin" class="registerForm__input input" type="text" placeholder="Enter login..." required />
                             </div>
                             <div class="registerForm__group">
-                                <label for="password">
+                                <label for="yourpassword">
                                     <span class="registerForm__group registerForm__group_text_danger">*</span>
                                     Password
                                 </label>
-                                <input id="password" class="registerForm__input" type="password" placeholder="Enter password...">
+                                <input id="yourpassword" class="registerForm__input input" type="password" placeholder="Enter password..." required />
                             </div>
                             <div class="registerForm__group">
-                                <button type="submit">Register</button>
+                                <button id="register-button" class="registerForm__button button" type="submit">Register</button>
                             </div>
-
 
                         </form>
                     </div>
-                    <div class="registerContent__item" id="tab-2">
-                        <form action="#" class="authorizationForm" method="POST">
-                            <input type="text" placeholder="Enter login..."/>
-                            <input type="password" placeholder="Enter password...">
-                            <button>Submit</button>
+                    <div class="registerContent__item active" id="tab-2">
+                        <h2>Login or register</h2>
+                        <form action="#" class="authorizationForm form">
+                            <div class="authorizationForm__group">
+                                <label for="login">
+                                    Login
+                                </label>
+                                <input id="login" class="authorizationForm__input input" type="text" placeholder="Enter login..." required />
+                            </div>
+                            <div class="authorizationForm__group">
+                                <label for="password">
+                                    Password
+                                </label>
+                                <input id="password" class="authorizationForm__input input" type="password" placeholder="Enter password..." required />
+                            </div>
+                            <div class="authorizationForm__group">
+                                <button id="autorization-button" class="authorizationForm__button  button" type="submit">LogIn</button>
+                            </div>
                         </form>
                     </div>
                 </div>

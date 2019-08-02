@@ -1,2 +1,2 @@
 
-//= modules/register-tab.js
+//= modules/register-page.js
