@@ -1,39 +1,45 @@
 <!doctype html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport"
-		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="ie=edge">
-	<title>TaskTrackingSystem</title>
-	<link rel="stylesheet" href="/styles/main.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task Tracking System</title>
+    <link rel="stylesheet" href="/styles/main.min.css">
 </head>
 <body class="body">
-	<header id="" class="header">
-		<div class="container">
-			<div class="logo">
-                
+    <div class="wrapper">
+
+        //= template/header-home.html
+
+        <section class="homeSection contentSection">
+            <div  class="homeContent">
+                <div id="tab-1" class="homeContent__item pagePane active">
+                    Slider
+                </div>
+                <div id="tab-2" class="homeContent__item pagePane">
+                    <div class="container">
+                        Galery
+                    </div>
+                </div>
+                <div id="tab-3" class="homeContent__item pagePane">
+                    <div class="container">
+                        Map
+                    </div>
+                </div>
+                <div id="tab-4" class="homeContent__item pagePane">
+                    <div class="container">
+                        Get Started
+                    </div>
+                </div>
             </div>
-            <nav>
-                <ul>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                    <li><a href="#"></a></li>
-                </ul>
-            </nav>
-		</div>
-	</header>
+        </section>
 
-	<main>
-		<section></section>
-		<section></section>
-		<section></section>
-	</main>
-	<footer>
+        //= template/footer.html
+    </div>
 
-	</footer>
+    <script src="/scripts/script.min.js"></script>
+
 </body>
 </html>
-

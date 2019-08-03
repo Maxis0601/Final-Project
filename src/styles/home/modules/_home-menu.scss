@@ -1,0 +1,41 @@
+.homeMenu {
+  	display: flex;
+  	&__item {
+	  	margin-right: $margin;
+	  	display: block;
+	  	position: relative;
+	  	&:last-child {
+		  	margin-right: 0;
+		}
+	  	&:hover{
+		  	corsor: pointer;
+		}
+	  	.submenu {
+		  	visibility: hidden;
+		  	display: none;
+		  	opacity: 0;
+		  	&__item {
+				display: block;
+			  	background: $white;
+			  	padding: $padding/2;
+			  	width: 100px;
+			  	border-bottom: 1px solid $light-grey;
+			  	&:last-child {
+				  	border-bottom: none;
+				}
+			}
+		}
+	  	&:hover > .submenu, .submenu:hover, .submenu:focus {
+		  	visibility: visible;
+		  	opacity: 1;
+		  	display: block;
+		  	position: absolute;
+		}
+
+
+	}
+  	&__link {
+	  	color: $white;
+	}
+
+}

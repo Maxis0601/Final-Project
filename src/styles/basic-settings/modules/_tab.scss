@@ -1,0 +1,7 @@
+.pagePane {
+	display: none;
+  	&.active {
+	  display: block;
+	}
+}
+
