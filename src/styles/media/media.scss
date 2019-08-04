@@ -1,0 +1,45 @@
+@media screen and (max-width: 1176px) {
+	.container {
+		width: 960px;
+	}
+}
+
+@media screen and (max-width: 960px) {
+	.container {
+	  	width: 100%;
+	}
+	.homeMenu {
+	  	display: none;
+	}
+	.homeMenu__item{
+		width: 100%;
+		display: block;
+		font-size: 12px;
+	}
+	.homeMenu__link{
+		display: block;
+		padding: 8px;
+	}
+	.toggle-bottom {
+		text-align: center;
+		display: block;
+		cursor: pointer;
+		color: 	#000;
+	}
+	.toggle-bottom:after{
+		content: attr(data-open);
+		display: block;
+	}
+	#menu-checkbox:checked + nav[role="navigation"] .homeMenu{
+	  	display: block;
+	}
+	#menu-checkbox:checked + nav[role="navigation"] .toggle-button:after{
+	  	content: attr(data-close);
+	}
+
+	.homeMenu{
+		position: relative;
+		top: 30px;
+		right: 115px;
+	}
+}

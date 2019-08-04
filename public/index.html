@@ -17,7 +17,9 @@
                     <div class="logo">
                         Logo
                     </div>
-                    <nav>
+                    <input type="checkbox" id="menu-checkbox">
+                    <nav role="navigation">
+                        <label for="menu-checkbox" class="toggle-bottom" data-open="MENU" data-close="CLOSE" onclick></label>
                         <ul class="homeMenu navPages">
                             <li class="homeMenu__item active">
                                 <a href="#tab-1" class="homeMenu__link">Home</a>
@@ -48,21 +50,104 @@
         <section class="homeSection contentSection">
             <div  class="homeContent">
                 <div id="tab-1" class="homeContent__item pagePane active">
-                    Slider
+
+                    <div class="sliderContainer">
+                        <ul id="slides" class="slider">
+                            <li class="slider__item  showing">
+                                <div class="dimmingPictures">
+                                    <div class="container">
+                                        <div class="row">
+                                            <h1>Task Tracking System</h1>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="slider__item">
+                                <div class="dimmingPictures">
+                                    <div class="container">
+                                        <h2>Task Tracking System</h2>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="slider__item ">
+                                <div class="dimmingPictures">
+                                    <div class="container">
+                                        <h2>Task Tracking System</h2>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
+                        <div class="buttonsControl">
+                            <div class="container">
+                                <button class="buttonsControl__item" id="previous">&lt;</button>
+                                <button class="buttonsControl__item" id="pause">&#10074;&#10074;</button>
+                                <button class="buttonsControl__item" id="next">&gt;</button>
+                            </div>
+                        </div>
+                    </div>
+
                 </div>
                 <div id="tab-2" class="homeContent__item pagePane">
                     <div class="container">
-                        Galery
+
+                        <div class="aboutWrapper">
+                            <ul class="benefits">
+                                <li class="benefits__item">ggg</li>
+                                <li class="benefits__item">ggg</li>
+                                <li class="benefits__item">ggg</li>
+                                <li class="benefits__item">ggg</li>
+                                <li class="benefits__item">ggg</li>
+                                <li class="benefits__item">ggg</li>
+                                <li class="benefits__item">ggg</li>
+                                <li class="benefits__item">ggg</li>
+                                <li class="benefits__item">ggg</li>
+                            </ul>
+                        </div>
+
                     </div>
                 </div>
                 <div id="tab-3" class="homeContent__item pagePane">
-                    <div class="container">
-                        Map
+
+                    <div class="mapWrapper">
+                        <div class="dimmingPictures">
+                            <div class="container">
+                                <div class="contactWrapper">
+                                    <div class="contact">
+                                        <h4 class="contact__header">
+                                            Contact
+                                        </h4>
+                                        <p class="contact__item">
+                                            <span class="contact__item contact__item_text">Tel:</span> +38(099)251-23-16
+                                        </p>
+                                        <p class="contact__item">
+                                            <span class="contact__item contact__item_text">Email:</span> pml06011998@gmail.com
+                                        </p>
+                                        <p class="contact__item">
+                                            <span class="contact__item contact__item_text">Contact us:</span>
+                                        </p>
+                                        <a href="#" class="contact__button button">Telegram</a>
+                                        <a href="#" class="contact__button button">GitHub</a>
+                                        <a href="#" class="contact__button button">Facebook</a>
+                                        <a href="#" class="contact__button button">Instagram</a>
+                                        <a href="#" class="contact__button button">LinkidIn</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
+
                 </div>
                 <div id="tab-4" class="homeContent__item pagePane">
                     <div class="container">
-                        Get Started
+
+                        <div class="startedContainer">
+                            <h3>Get started Task Tracking System</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi distinctio excepturi
+                                nulla minus consequuntur sunt veritatis libero, hic omnis aspernatur id recusandae,
+                                modi sint quidem molestiae asperiores, quas blanditiis doloribus?</p>
+                            <button class="getStarted">Get Started</button>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -92,6 +177,7 @@
                 </div>
             </div>
         </footer>
+
     </div>
 
     <script src="/scripts/script.min.js"></script>

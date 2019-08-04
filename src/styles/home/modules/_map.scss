@@ -1,0 +1,41 @@
+.mapWrapper {
+  	background: url('/img/map.jpg') no-repeat center top;
+  	height: 100%;
+	background-size: cover;
+}
+
+.contactWrapper {
+  	display: flex;
+  	justify-content: flex-end;
+  	padding-top: 10%;
+}
+
+.contact {
+  	display: block;
+  	background: $white;
+	width: 30%;
+  	padding: $padding;
+  	border-radius: $border-radius;
+  	color: $black;
+  	&__header {
+	  	text-align: center;
+	  	font-size: $font-size*2;
+	  	margin-bottom: $margin;
+	}
+  	&__item {
+	  	font-size: $font-size + $font-size/2;
+	  	margin-bottom: $margin/2;
+	  	&_text {
+		  	font-weight: 700;
+		}
+	}
+  	&__button {
+	  	display: block;
+	  	background: $light-blue;
+	  	text-align: center;
+	  	margin-bottom: $margin/2;
+	  	&:last-child {
+		   	margin: 0;
+		}
+	}
+}

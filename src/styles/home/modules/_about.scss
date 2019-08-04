@@ -1,0 +1,19 @@
+.aboutWrapper {
+  	height: 100%;
+}
+
+.benefits {
+  	height: 100%;
+  	display:flex;
+  	justify-content: space-between;
+  	align-items: center;
+  	flex-flow: wrap;
+  	margin: auto;
+  	&__item {
+	   	display: block;
+	  	width: 30%;
+	  	height: 30%;
+	  	background: $white;
+	  	border: 1px solid $grey;
+	}
+}
