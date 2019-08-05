@@ -8,38 +8,54 @@
 	.container {
 	  	width: 100%;
 	}
-	.homeMenu {
-	  	display: none;
-	}
-	.homeMenu__item{
-		width: 100%;
-		display: block;
-		font-size: 12px;
-	}
-	.homeMenu__link{
-		display: block;
-		padding: 8px;
-	}
-	.toggle-bottom {
-		text-align: center;
-		display: block;
-		cursor: pointer;
-		color: 	#000;
-	}
-	.toggle-bottom:after{
-		content: attr(data-open);
-		display: block;
-	}
-	#menu-checkbox:checked + nav[role="navigation"] .homeMenu{
+	.menu-button {
 	  	display: block;
 	}
-	#menu-checkbox:checked + nav[role="navigation"] .toggle-button:after{
-	  	content: attr(data-close);
+  	.navigation {
+	  	display: none;
+	  	position: relative;
+	}
+	.menu-checkbox:checked ~ nav {
+	  	display: block;
+	  	position: absolute;
+	  	right: 0;
+	  	top: 10%;
+	  	z-index: 6;
+	}
+  	.homeMenu {
+	  	display: block;
+	  	flex-direction: column;
+	  	background: $light-grey;
+	  	width: 100px;
+	  	&__item {
+		  	background: $white;
+		  	display: block;
+		  	width: 100%;
+		  	border-bottom: 1px solid $grey;
+			&:hover > .submenu, .submenu:hover, .submenu:focus {
+				visibility: visible;
+				opacity: 1;
+				display: block;
+				position: absolute;
+			  	top: 20px;
+			  	right: 100px;
+			}
+		}
+	  	&__link {
+		  	color: $black;
+		}
 	}
 
-	.homeMenu{
-		position: relative;
-		top: 30px;
-		right: 115px;
+
+}
+
+@media screen and (max-width: 320px) {
+	html,
+	body {
+		margin: 0;
+		overflow-x: hidden;
+	}
+	.nav {
+		width: 100%;
 	}
 }
