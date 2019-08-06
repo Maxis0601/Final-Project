@@ -14,14 +14,14 @@
             <div class="container">
                 <div class="row">
                     <div class="logo">
-                        Logo
+                        <a href="/index.html"><img src="/img/logo.png" alt="Logo"></a>
                     </div>
-                    <ul class="menuRegister">
-                        <li class="menuRegister__item" >
-                            <span rel="tab-11">Register</span>
+                    <ul class="menuRegister navPages">
+                        <li class="menuRegister__item " >
+                            <a href="#registerTab" class="menuRegister__link">Register</a>
                         </li>
                         <li class="menuRegister__item active">
-                            <span rel="tab-22">LogIn</span>
+                            <a href="#autorizationTab" class="menuRegister__link">LogIn</a>
                         </li>
                     </ul>
                 </div>
@@ -30,7 +30,8 @@
         <section class="registerSection contentSection">
             <div class="container">
                 <div class="registerContent">
-                    <div class="registerContent__item" id="tab-11">
+                    <div id="registerTab" class="registerContent__item pagePane" >
+
                         <h2>Register</h2>
                         <form action="#" class="registerForm form">
                             <div class="registerForm__group">
@@ -41,10 +42,10 @@
                                 <input id="firstname" class="registerForm__input input" type="text" placeholder="Enter first name..." required />
                             </div>
                             <div class="registerForm__group">
-                                <label for="secondname">
+                                <label for="lastname">
                                     Second Name
                                 </label>
-                                <input id="secondname" class="registerForm__input input" type="text" placeholder="Enter second name..." />
+                                <input id="lastname" class="registerForm__input input" type="text" placeholder="Enter second name..." />
                             </div>
                             <div class="registerForm__group">
                                 <label for="yourlogin">
@@ -61,12 +62,14 @@
                                 <input id="yourpassword" class="registerForm__input input" type="password" placeholder="Enter password..." required />
                             </div>
                             <div class="registerForm__group">
-                                <button id="register-button" class="registerForm__button button" type="submit">Register</button>
+                                <button   id="register-button" class="registerForm__button button" type="submit" onclick="registerButton()">Register</button>
                             </div>
-
+                        
                         </form>
+
                     </div>
-                    <div class="registerContent__item active" id="tab-22">
+                    <div id="autorizationTab" class="registerContent__item pagePane active" >
+
                         <h2>Login or register</h2>
                         <form action="#" class="authorizationForm form">
                             <div class="authorizationForm__group">
@@ -82,9 +85,10 @@
                                 <input id="password" class="authorizationForm__input input" type="password" placeholder="Enter password..." required />
                             </div>
                             <div class="authorizationForm__group">
-                                <button id="autorization-button" class="authorizationForm__button  button" type="submit">LogIn</button>
+                                <button id="autorization-button" class="authorizationForm__button  button" type="submit" onclick="autorization()">LogIn</button>
                             </div>
                         </form>
+
                     </div>
                 </div>
             </div>

@@ -14,14 +14,14 @@
             <div class="container">
                 <div class="row">
                     <div class="logo">
-                        Logo
+                        <a href="/index.html"><img src="/img/logo.png" alt="Logo"></a>
                     </div>
-                    <ul class="menuRegister">
-                        <li class="menuRegister__item" >
-                            <span rel="tab-11">Register</span>
+                    <ul class="menuRegister navPages">
+                        <li class="menuRegister__item " >
+                            <a href="#registerTab" class="menuRegister__link">Register</a>
                         </li>
                         <li class="menuRegister__item active">
-                            <span rel="tab-22">LogIn</span>
+                            <a href="#autorizationTab" class="menuRegister__link">LogIn</a>
                         </li>
                     </ul>
                 </div>
@@ -30,61 +30,15 @@
         <section class="registerSection contentSection">
             <div class="container">
                 <div class="registerContent">
-                    <div class="registerContent__item" id="tab-11">
-                        <h2>Register</h2>
-                        <form action="#" class="registerForm form">
-                            <div class="registerForm__group">
-                                <label for="firstname">
-                                    <span class="registerForm__group registerForm__group_text_danger">*</span>
-                                    First Name
-                                </label>
-                                <input id="firstname" class="registerForm__input input" type="text" placeholder="Enter first name..." required />
-                            </div>
-                            <div class="registerForm__group">
-                                <label for="secondname">
-                                    Second Name
-                                </label>
-                                <input id="secondname" class="registerForm__input input" type="text" placeholder="Enter second name..." />
-                            </div>
-                            <div class="registerForm__group">
-                                <label for="yourlogin">
-                                    <span class="registerForm__group registerForm__group_text_danger">*</span>
-                                    Login
-                                </label>
-                                <input id="yourlogin" class="registerForm__input input" type="text" placeholder="Enter login..." required />
-                            </div>
-                            <div class="registerForm__group">
-                                <label for="yourpassword">
-                                    <span class="registerForm__group registerForm__group_text_danger">*</span>
-                                    Password
-                                </label>
-                                <input id="yourpassword" class="registerForm__input input" type="password" placeholder="Enter password..." required />
-                            </div>
-                            <div class="registerForm__group">
-                                <button id="register-button" class="registerForm__button button" type="submit">Register</button>
-                            </div>
+                    <div id="registerTab" class="registerContent__item pagePane" >
 
-                        </form>
+                        //= template/register-form.html
+
                     </div>
-                    <div class="registerContent__item active" id="tab-22">
-                        <h2>Login or register</h2>
-                        <form action="#" class="authorizationForm form">
-                            <div class="authorizationForm__group">
-                                <label for="login">
-                                    Login
-                                </label>
-                                <input id="login" class="authorizationForm__input input" type="text" placeholder="Enter login..." required />
-                            </div>
-                            <div class="authorizationForm__group">
-                                <label for="password">
-                                    Password
-                                </label>
-                                <input id="password" class="authorizationForm__input input" type="password" placeholder="Enter password..." required />
-                            </div>
-                            <div class="authorizationForm__group">
-                                <button id="autorization-button" class="authorizationForm__button  button" type="submit">LogIn</button>
-                            </div>
-                        </form>
+                    <div id="autorizationTab" class="registerContent__item pagePane active" >
+
+                        //= template/autorization-form.html
+
                     </div>
                 </div>
             </div>

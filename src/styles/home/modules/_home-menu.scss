@@ -1,3 +1,7 @@
+.homeHeader {
+  	background: $light-black;
+}
+
 .menu-button {
   	font-size: 20px;
   	display: none;
@@ -11,10 +15,14 @@
   	display: flex;
   	&__item {
 	  	margin-right: $margin;
+	  	padding-right: $padding;
 	  	display: block;
 	  	position: relative;
+	  	border-right: 1px solid $white;
 	  	&:last-child {
 		  	margin-right: 0;
+		  	padding-right: 0;
+		  	border-right: 0;
 		}
 	  	&:hover{
 		  	corsor: pointer;
@@ -25,20 +33,24 @@
 		  	opacity: 0;
 		  	&__item {
 				display: block;
-			  	background: $white;
+			  	background: $light-black;
 			  	padding: $padding/2;
-			  	width: 100px;
-			  	border-bottom: 1px solid $light-grey;
+			  	width: 150px;
+			  	border-bottom: 1px solid $white;
 			  	&:last-child {
 				  	border-bottom: none;
 				}
 			}
+		  	&__link {
+			  	color: $white;
+			}
 		}
-	  	&:hover > .submenu, .submenu:hover, .submenu:focus {
+	  	&:hover > .submenu, .submenu:hover{
 		  	visibility: visible;
 		  	opacity: 1;
 		  	display: block;
 		  	position: absolute;
+		  	z-index: 4;
 		}
 
 

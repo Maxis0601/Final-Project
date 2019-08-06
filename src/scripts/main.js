@@ -3,3 +3,4 @@
 
 //= modules/slider.js
 
+//= modules/registration.js

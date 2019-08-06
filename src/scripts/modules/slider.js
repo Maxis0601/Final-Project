@@ -1,7 +1,3 @@
-var controls = document.querySelectorAll('.buttonsControl__item');
-for(var i=0; i<controls.length; i++){
-    controls[i].style.display = 'inline-block';
-}
 
 var slides = document.querySelectorAll('#slides .slider__item');
 var currentSlide = 0;
@@ -25,31 +21,34 @@ function goToSlide(n){
 var playing = true;
 var pauseButton = document.getElementById('pause');
 
-function pauseSlideshow(){
+function pause(){
     pauseButton.innerHTML = '&#9658;'; // play character
     playing = false;
     clearInterval(slideInterval);
 }
 
-function playSlideshow(){
+function play(){
     pauseButton.innerHTML = '&#10074;&#10074;'; // pause character
     playing = true;
     slideInterval = setInterval(nextSlide,2000);
 }
 
 pauseButton.onclick = function(){
-    if(playing){ pauseSlideshow(); }
-    else{ playSlideshow(); }
+    if(playing){ pause(); }
+    else{ play(); }
 };
 
 var next = document.getElementById('next');
 var previous = document.getElementById('previous');
 
 next.onclick = function(){
-    pauseSlideshow();
+    pause();
     nextSlide();
 };
 previous.onclick = function(){
-    pauseSlideshow();
+    pause();
     previousSlide();
 };
+
+
+

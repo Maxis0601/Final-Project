@@ -1,0 +1,82 @@
+@media screen and (max-width: 1176px) {
+	.slider {
+		&__item {
+			h1 {
+				font-size: $font-size*10;
+			}
+			h2 {
+				font-size: $font-size*8;
+			}
+		}
+	}
+	.buttonsControl {
+		&__item {
+			padding: $padding/2;
+		}
+	}
+}
+@media screen and (max-width: 960px) {
+
+  	.sliderContainer {
+	  	display: none;
+	}
+  	.mobileBanner {
+	  	height: 100%;
+	  	background: url('/img/slide1.jpg') no-repeat center top;
+	  	h1 {
+		  	color: $white;
+		  	font-size: $font-size*8;
+		  	text-align: center;
+		}
+	}
+
+  	.menu-button {
+		  display: block;
+		}
+		.navigation {
+			display: none;
+			position: relative;
+		}
+		.menu-checkbox:checked ~ nav {
+			display: block;
+			position: absolute;
+			right: 0;
+			top: 10%;
+			z-index: 6;
+		}
+		.homeMenu {
+			display: block;
+			flex-direction: column;
+			background: $light-grey;
+			width: 100px;
+			&__item {
+				background: $white;
+				display: block;
+				width: 100%;
+				border-bottom: 1px solid $grey;
+				&:hover > .submenu, .submenu:hover, .submenu:focus {
+					visibility: visible;
+					opacity: 1;
+					display: block;
+					position: absolute;
+					top: 20px;
+					right: 100px;
+				}
+			}
+			&__link {
+				color: $black;
+			}
+		}
+
+  	}
+
+@media screen and (max-width: 320px) {
+  html,
+  body {
+	margin: 0;
+	overflow-x: hidden;
+  }
+  .nav {
+	width: 100%;
+  }
+}

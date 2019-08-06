@@ -11,11 +11,11 @@
 <body class="body">
     <div class="wrapper">
 
-        <header class="header">
+        <header class="header homeHeader">
             <div class="container">
                 <div class="row">
                     <div class="logo">
-                        Logo
+                        <a href="#"><img src="/img/logo.png" alt="Logo"></a>
                     </div>
                     <input type="checkbox" id="menu-checkbox" class="menu-checkbox" />
                     <label for="menu-checkbox" class="menu-button">MENU</label>
@@ -28,6 +28,12 @@
                             <li class="homeMenu__item">
                                 <a href="#tab-2" class="homeMenu__link">About</a>
                                 <ul class="submenu">
+                                    <li class="submenu__item">
+                                        <a href="#tab-2" class="submenu__link">Big text, very big</a>
+                                    </li>
+                                    <li class="submenu__item">
+                                        <a href="#tab-2" class="submenu__link">Big text, very big</a>
+                                    </li>
                                     <li class="submenu__item">
                                         <a href="#tab-2" class="submenu__link">Big text, very big</a>
                                     </li>
@@ -80,9 +86,17 @@
                         </ul>
                         <div class="buttonsControl">
                             <div class="container">
-                                <button class="buttonsControl__item" id="previous">&lt;</button>
-                                <button class="buttonsControl__item" id="pause">&#10074;&#10074;</button>
-                                <button class="buttonsControl__item" id="next">&gt;</button>
+                                <button class="buttonsControl__item button" id="previous">&lt;</button>
+                                <button class="buttonsControl__item button" id="pause">&#10074;&#10074;</button>
+                                <button class="buttonsControl__item button" id="next">&gt;</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mobileBanner">
+                        <div class="container">
+                            <div class="row">
+                                <h1>Task Tracking System</h1>
                             </div>
                         </div>
                     </div>
@@ -146,7 +160,7 @@
                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi distinctio excepturi
                                 nulla minus consequuntur sunt veritatis libero, hic omnis aspernatur id recusandae,
                                 modi sint quidem molestiae asperiores, quas blanditiis doloribus?</p>
-                            <button class="getStarted">Get Started</button>
+                            <a href="/register.html" class="getStarted">Get Started</a>
                         </div>
 
                     </div>

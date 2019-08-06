@@ -18,22 +18,24 @@
             <div class="adminContainer">
                 <div class="row">
                     <h2 class="logo">
-                        <a href="#">Logo</a>
+                        <a href="#"><img src="/img/logo.png" alt="Logo"></a>
                     </h2>
+                    <button onclick="exit()">LogOut</button>
                 </div>
+
 
                 <input type="checkbox" id="nav-toggle" hidden>
                 <nav class="nav">
                     <label for="nav-toggle" class="nav-toggle" onclick></label>
                     <ul class="adminMenu navPages">
                         <li class="adminMenu__item  active">
-                            <a class="adminMenu__link" href="#project">Project</a>
-                        </li>
-                        <li class="adminMenu__item">
                             <a class="adminMenu__link" href="#task">Task</a>
                         </li>
                         <li class="adminMenu__item">
-                            <a class="adminMenu__link" href="#customer">Customer</a>
+                            <a class="adminMenu__link" href="#developer">Developers</a>
+                        </li>
+                        <li class="adminMenu__item">
+                            <a class="adminMenu__link" href="#customer">Customers</a>
                         </li>
                     </ul>
                 </nav>
@@ -42,50 +44,98 @@
 
         <section class="adminSection">
             <div class="adminContent">
-                <div id="project" class="adminContent__item pagePane">
-                    <div class="adminContainer">
-                        ksdfh
-                    </div>
-                </div>
-                <div id="task" class="adminContent__item pagePane active ">
+                <div id="task" class="adminContent__item pagePane active">
+
                     <div class="adminContainer">
                         <div class="build adminHeader">
                             <h2>Task</h2>
                         </div>
                         <div class="build tableContainer">
+                    
                             <div class="adminButton">
-                                <button id="addRow" class="adminButton__item adminButton__item_color_green button">Add new row</button>
-                                <button id="deleteRow" class="adminButton__item adminButton__item_color_red button">Delete select row</button>
+                                <button id="addTask" class="adminButton__item adminButton__item_color_green button">Add new task</button>
+                                <button id="deleteTask" class="adminButton__item adminButton__item_color_red button">Delete select row</button>
                             </div>
-                            <div class="inputContainer">
-                                <input type="number" class="input" id="column1" placeholder="Enter number">
-                                <input type="text" class="input"  id="column2" placeholder="Enter name">
-                                <input type="text" class="input"  id="column3" placeholder="Enter customer">
-                                <input type="text" class="input"  id="column4" placeholder="Enter developer">
-                                <input type="date" class="input"  id="column5" >
-                                <input type="date" class="input"  id="column6">
-                                <input type="text" class="input"  id="column7" placeholder="Enter status">
-                            </div>
-                            <table id="example" class="display" cellspacing="0" width="100%">
+                            <!--<div class="inputContainer">
+                                <input type="text" class="input"  id="taskName" placeholder="Enter name" />
+                                <input type="text" class="input"  id="taskCustomer" placeholder="Enter customer" />
+                                <input type="text" class="input"  id="taskDeveloper" placeholder="Enter developer" />
+                                <input type="date" class="input"  id="taskStDate" placeholder="Start date" />
+                                <input type="date" class="input"  id="taskFinDate" placeholder="Finish date" />
+                                <input type="text" class="input"  id="taskStatus" placeholder="Enter status" />
+                            </div>-->
+                            <table id="tableTask" class="display" cellspacing="0" width="100%">
                                 <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>Name Task</th>
-                                    <th>Customer</th>
-                                    <th>Developer</th>
-                                    <th>Data Start</th>
-                                    <th>Data Finish</th>
-                                    <th>Status</th>
-                                </tr>
+                                    <tr>
+                                        <th>Name Task</th>
+                                        <th>Customer</th>
+                                        <th>Developer</th>
+                                        <th>Data Start</th>
+                                        <th>Data Finish</th>
+                                        <th>Status</th>
+                                    </tr>
                                 </thead>
+                    
+                                <tfoot>
+                                    <tr>
+                                        <th>Name</th>
+                                        <th>Name Task</th>
+                                        <th>Email</th>
+                                        <th>Phone</th>
+                                        <th>Age</th>
+                                        <th>Position</th>
+                                    </tr>
+                                </tfoot>
                             </table>
                         </div>
-
                     </div>
+
+                </div>
+                <div id="developer" class="adminContent__item pagePane ">
+
+                    <div class="adminContainer">
+                        <div class="build adminHeader">
+                            <h2>Developers</h2>
+                        </div>
+                        <div class="build tableContainer">
+                            <div class="adminButton">
+                                <button id="addDeveloper" class="adminButton__item adminButton__item_color_green button">Add new row</button>
+                                <button id="deleteDeveloper" class="adminButton__item adminButton__item_color_red button">Delete select row</button>
+                            </div>
+                            <!--<div class="inputContainer">
+                                <input type="number" class="input" id="developerNumber" placeholder="Enter number" />
+                                <input type="text" class="input"  id="developerName" placeholder="Enter name" />
+                                <input type="text" class="input"  id="developerTask" placeholder="Enter task" />
+                                <input type="email" class="input"  id="developerEmail" placeholder="Enter developer" />
+                                <input type="tel" class="input"  id="developerPhone" placeholder="Enter phone" />
+                                <input type="number" class="input"  id="developerAge" placeholder="Enter age" />
+                                <input type="text" class="input"  id="developerPosition" placeholder="Enter position" />
+                            </div>-->
+                            <table id="developerTable" class="display" cellspacing="0" width="100%">
+                                <thead>
+                                    <tr>
+                                        <th>#</th>
+                                        <th>Name</th>
+                                        <th>Name Task</th>
+                                        <th>Email</th>
+                                        <th>Phone</th>
+                                        <th>Age</th>
+                                        <th>Position</th>
+                                    </tr>
+                                </thead>
+                    
+                    
+                    
+                            </table>
+                        </div>
+                    </div>
+
                 </div>
                 <div id="customer" class="adminContent__item pagePane">
                     <div class="adminContainer">
-                        sfjl;
+                        <div class="build adminHeader">
+                            <h2>Customers</h2>
+                        </div>
                     </div>
                 </div>
             </div>

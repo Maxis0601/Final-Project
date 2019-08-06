@@ -2,9 +2,14 @@
     display: flex;
     &__item {
         margin-right: $margin;
+        cursor: pointer;
         &:last-child{
            margin: 0;
         }
+
+    }
+    &__link {
+        color: $white;
     }
 }
 
