@@ -13,3 +13,14 @@
 	}
 
 }
+
+@media screen and (max-width: 480px) {
+  	.footerRow {
+	  	display: flex;
+		flex-direction: column;
+	  	justify-content: center;
+	  	p {
+		   padding-bottom: $padding/2;
+		}
+	}
+}

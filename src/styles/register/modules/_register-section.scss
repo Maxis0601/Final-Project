@@ -1,15 +1,12 @@
 .registerContent {
-  	padding: $padding*3;
+  	padding: 10% 0;
   	&__item {
-		display: none;
 		h2 {
 		  	text-align: center;
 		  	padding-bottom: $padding;
 		}
 	}
-  	&__item.active {
-	  display: block;
-	}
+
 }
 
 .registerForm {

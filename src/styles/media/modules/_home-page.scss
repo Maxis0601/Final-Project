@@ -1,4 +1,5 @@
 @media screen and (max-width: 1176px) {
+  	/*Banner with menu*/
 	.slider {
 		&__item {
 			h1 {
@@ -14,69 +15,260 @@
 			padding: $padding/2;
 		}
 	}
+
+  	/*Contact*/
+
+	.contact {
+		width: 40%;
+
+	}
+
+  	/*Get Started*/
+
+	.startedContainer {
+		h3 {
+		  	font-size: $font-size*3;
+		}
+		p {
+		  	font-size: $font-size*2;
+		}
+	}
+
 }
 @media screen and (max-width: 960px) {
 
-  	.sliderContainer {
+  	/*Banner with menu*/
+
+	.sliderContainer {
+		display: none;
+	}
+	.mobileBanner {
+		display: block;
+		height: 100%;
+		background: url('/img/slide1.jpg') no-repeat center top;
+		h1 {
+			color: $white;
+			font-size: $font-size*8;
+			text-align: center;
+		}
+	}
+
+	.menu-button {
+	  	display: block;
+	}
+	.navigation {
 	  	display: none;
+	  	position: relative;
 	}
-  	.mobileBanner {
-	  	height: 100%;
-	  	background: url('/img/slide1.jpg') no-repeat center top;
-	  	h1 {
-		  	color: $white;
-		  	font-size: $font-size*8;
-		  	text-align: center;
-		}
+	.menu-checkbox:checked ~ .navigation {
+		display: block;
+		position: absolute;
+		right: 0;
+		top: 10%;
+		z-index: 6;
 	}
-
-  	.menu-button {
-		  display: block;
-		}
-		.navigation {
-			display: none;
-			position: relative;
-		}
-		.menu-checkbox:checked ~ nav {
+	.homeMenu {
+		display: block;
+		flex-direction: column;
+		background: $light-grey;
+		width: 200px;
+		&__item {
+			background: $light-black;
 			display: block;
-			position: absolute;
-			right: 0;
-			top: 10%;
-			z-index: 6;
-		}
-		.homeMenu {
-			display: block;
-			flex-direction: column;
-			background: $light-grey;
-			width: 100px;
-			&__item {
-				background: $white;
+			width: 100%;
+			border-bottom: 1px solid $white;
+			padding: $padding/2 0;
+			text-align: center;
+		  	border-right: 0;
+			&:first-child {
+				border-top: 1px solid $white;
+			}
+			&:last-child {
+				border-bottom: 0;
+			}
+		  	&:hover > .submenu, .submenu:hover, .submenu:focus {
+				visibility: visible;
+				opacity: 1;
 				display: block;
-				width: 100%;
-				border-bottom: 1px solid $grey;
-				&:hover > .submenu, .submenu:hover, .submenu:focus {
-					visibility: visible;
-					opacity: 1;
-					display: block;
-					position: absolute;
-					top: 20px;
-					right: 100px;
-				}
-			}
-			&__link {
-				color: $black;
+				position: absolute;
+				top: 20px;
+				right: 200px;
+				border: 1px solid $light-black;
 			}
 		}
+		&__link {
+		  	color: $white;
+		}
+	}
 
-  	}
+  	/*Contact*/
+
+	.contactWrapper {
+	  padding-top: 2%;
+	}
+
+	.contact {
+		&__header {
+		  	font-size: $font-size+$font-size/2;
+		  	margin-bottom: $margin/2;
+		}
+		&__item {
+			font-size: $font-size;
+			margin-bottom: $margin/4;
+		}
+		&__button {
+		  	margin-bottom: $margin/4;
+		}
+	}
+
+  	/*Get Started*/
+
+	.startedContainer {
+	  	padding: 10%;
+	  	h3 {
+		  	margin-bottom: 5%;
+		}
+	  	p {
+		  	display: none;
+		}
+		.getStarted {
+
+		  	font-size: $font-size+$font-size/2;
+		}
+	}
+}
+
+@media screen and (max-width: 780px) {
+
+  	/*Banner with menu*/
+
+	.mobileBanner {
+		h1 {
+			  font-size: $font-size*6;
+		}
+	}
+
+	.menu-button::after{
+		  font-size: $font-size*2;
+	}
+
+  	/*Contact*/
+
+  	.contact {
+	  	padding: $padding/2;
+	}
+
+  	/*Get Started*/
+
+	.startedContainer {
+		h3 {
+			font-size: $font-size*2 + $font-size/2;
+		}
+		.getStarted {
+		  	width: 35%;
+		}
+	}
+}
+
+@media screen and (max-width: 680px) {
+
+  	/*Contact*/
+
+	.contact {
+	  	width: 45%;
+
+	}
+
+ 	 /*Get Started*/
+
+	.startedContainer {
+
+		.getStarted {
+		  	width: 40%;
+		  	font-size:  $font-size + $font-size/2;
+		}
+	}
+
+}
+
+@media screen and (max-width: 580px) {
+
+  	/*Banner with menu*/
+
+  	.mobileBanner {
+		h1 {
+		  font-size: $font-size*5;
+		}
+	}
+
+  	/*Contact*/
+
+	.contact {
+	  	width: 55%;
+		&__item {
+			&:nth-of-type(3) {
+			  display: none;
+			}
+		}
+	}
+
+  	/*Get started*/
+
+	.startedContainer {
+
+		 .getStarted {
+			  width: 45%;
+			  padding: $padding/2;
+		 }
+	}
+}
+
+
+@media screen and (max-width: 480px) {
+
+  	/*Banner with menu*/
+
+  	.homeMenu {
+		width: 150px;
+		&__item {
+			font-size: $font-size;
+			&:hover > .submenu, .submenu:hover, .submenu:focus {
+			  right: 150px;
+			}
+		}
+	}
+
+  	/*Contact*/
+
+	.contact {
+	  	width: 60%;
+	  	&__item {
+		  	&:nth-of-type(2) {
+			  	display: none;
+			}
+		}
+	}
+
+  	/*Get started*/
+
+	.startedContainer {
+		h3 {
+		  	font-size: $font-size*2;
+		}
+		.getStarted {
+			width: 50%;
+			font-size: $font-size;
+		}
+	}
+}
 
 @media screen and (max-width: 320px) {
-  html,
-  body {
-	margin: 0;
-	overflow-x: hidden;
-  }
-  .nav {
-	width: 100%;
-  }
+	html,
+	body {
+		margin: 0;
+		overflow-x: hidden;
+	}
+	.nav {
+	  	width: 100%;
+	}
 }

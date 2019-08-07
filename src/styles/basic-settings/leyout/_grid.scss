@@ -4,7 +4,7 @@
 }
 
 .contentSection {
-  	height: 85%;
+  	height: 83%;
 }
 
 
@@ -21,3 +21,10 @@
   	align-items: center;
 }
 
+.row-center {
+  	height: 100%;
+  	display: flex;
+  	flex-direction: column;
+	align-items: center;
+  	justify-content: center;
+}

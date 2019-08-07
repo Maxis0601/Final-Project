@@ -4,6 +4,20 @@
     height: 100%;
 }
 
+.adminPanel{
+    display: flex;
+    &__name {
+        margin-right: $margin;
+        font-size: $font-size + $font-size/2;
+    }
+    &__button {
+        padding: $padding/4;
+        border: none;
+        background: $light-grey;
+        color: $black;
+    }
+}
+
 
 .nav {
     width: 320px;
@@ -24,104 +38,86 @@
     left: 320px;
     top: 2%;
     padding: 0.5em;
-    background: inherit;
-    color: #dadada;
+    background: $dark-grey;
+    color: $light-grey;
     cursor: pointer;
-    font-size: 1.2em;
+    font-size: $font-size*2;
     line-height: 1;
     z-index: 3;
-    transition: color .25s ease-in-out;
 }
 
 
-.nav-toggle:after {
+.nav-toggle::after {
   content: '\2630';
   text-decoration: none;
 }
 
-.nav-toggle:hover {
-  color: #f4f4f4;
-}
-
-[id='nav-toggle'] {
+.checkbox {
   position: absolute;
   display: none;
 }
 
-[id='nav-toggle']:checked ~ .nav > .nav-toggle {
+.checkbox:checked ~ .nav > .nav-toggle {
   left: auto;
   right: 2px;
   top: 2px;
 }
 
 
-[id='nav-toggle']:checked ~ .nav {
+.checkbox:checked ~ .nav {
   left: 0;
-  overflow-y: auto;
+  overflow-y: auto; // vertical content
 }
 
-
-[id='nav-toggle']:checked ~ .nav > .nav-toggle:after {
+.checkbox:checked ~ .nav > .nav-toggle::after {
   content: '\2715';
 }
 
-.nav > ul {
-  display: block;
-  margin: 0;
-  padding: 0;
-  list-style: none;
+.nav {
+    .adminMenu {
+        display: block;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+        &__item {
+            line-height: 2.5;
+            opacity: 1;
+        }
+        .adminMenu__link {
+            display: inline-block;
+            position: relative;
+            padding: 0;
+            font-family: 'Open Sans', sans-serif;
+            font-weight: 300;
+            font-size: 1.2em;
+            color: #dadada;
+            width: 100%;
+            text-decoration: none;
+            &:hover, &:focus {
+                color: white;
+            }
+            &::after {
+                content: '';
+                display: block;
+                position: absolute;
+                right: 0;
+                bottom: 0;
+                height: 1px;
+                width: 100%;
+            }
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+                height: 1px;
+                width: 100%;
+                background: $light-grey;
+            }
+        }
+    }
 }
 
-.nav > ul > li {
-  line-height: 2.5;
-  opacity: 1;
-}
-
-.nav > ul > li > a {
-  display: inline-block;
-  position: relative;
-  padding: 0;
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 300;
-  font-size: 1.2em;
-  color: #dadada;
-  width: 100%;
-  text-decoration: none;
-  /* плавный переход */
-  -webkit-transition: color .5s ease, padding .5s ease;
-  -moz-transition: color .5s ease, padding .5s ease;
-  transition: color .5s ease, padding .5s ease;
-}
-
-
-.nav > ul > li > a:hover,
-.nav > ul > li > a:focus {
-  color: white;
-}
-
-.nav > ul > li > a:before {
-  content: '';
-  display: block;
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  height: 1px;
-  width: 100%;
-  -webkit-transition: width 0s ease;
-  transition: width 0s ease;
-}
-
-.nav > ul > li > a:after {
-  content: '';
-  display: block;
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 1px;
-  width: 100%;
-  background: $light-grey;
-  -webkit-transition: width .5s ease;
-  transition: width .5s ease;
-}
 
 

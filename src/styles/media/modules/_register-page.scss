@@ -1,0 +1,93 @@
+@media screen and (max-width: 1176px) {
+  	/*Header with menu*/
+
+  	/*Register*/
+
+  	/*Autorization*/
+
+}
+@media screen and (max-width: 960px) {
+	/*Header with menu*/
+	.registerContent {
+	  	padding: 5% 0;
+	}
+	/*Register*/
+  	.registerForm {
+	  	width: 35%;
+	}
+	/*Autorization*/
+	.authorizationForm {
+		width: 35%;
+	}
+}
+@media screen and (max-width: 780px) {
+	/*Header with menu*/
+
+	/*Register*/
+	.registerForm {
+	  	width: 40%;
+	}
+	/*Autorization*/
+	.authorizationForm {
+	  	width: 40%;
+	}
+}
+
+@media screen and (max-width: 680px) {
+	/*Header with menu*/
+
+	/*Register*/
+	.registerForm {
+	  	width: 45%;
+	}
+	/*Autorization*/
+	.authorizationForm {
+	  	width: 45%;
+	}
+}
+
+@media screen and (max-width: 580px) {
+	/*Header with menu*/
+
+	/*Register*/
+	.registerForm {
+	  	width: 50%;
+	}
+	/*Autorization*/
+	.authorizationForm {
+	  	width: 50%;
+	}
+}
+@media screen and (max-width: 480px) {
+
+  	/*Header with menu*/
+
+	.registerHeader {
+	  	font-size: $font-size;
+	}
+
+	/*Register*/
+	.registerForm {
+	  	width: 60%;
+	}
+	/*Autorization*/
+	.authorizationForm {
+	  	width: 60%;
+	}
+}
+
+@media screen and (max-width: 380px) {
+	/*Register*/
+	.registerForm {
+	  	width: 70%;
+	}
+	/*Autorization*/
+	.authorizationForm {
+	  	width: 70%;
+	}
+}
+
+
+@media screen and (max-width: 320px) {
+
+}

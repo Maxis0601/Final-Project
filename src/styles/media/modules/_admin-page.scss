@@ -1,0 +1,84 @@
+@media screen and (max-width: 1176px) {
+  	/*Header with button*/
+	.nav-toggle{
+	  	font-size: $font-size + $font-size/1.5;
+	}
+  	/*Table*/
+}
+@media screen and (max-width: 960px) {
+	/*Header with button*/
+  	.nav-toggle{
+	  	font-size: $font-size + $font-size/2;
+	}
+	/*Table*/
+	.adminButton {
+		&__item {
+			padding: $padding/2 ;
+		}
+	}
+	.dataTables_length,
+	.dataTables_wrapper {
+	  	font-size: $font-size + $font-size/6;
+	}
+}
+
+
+@media screen and (max-width: 780px) {
+	/*Header with button*/
+	.nav-toggle{
+	  	font-size: $font-size + $font-size/4;
+	}
+	/*Table*/
+	.dataTables_length,
+	.dataTables_wrapper {
+	  	font-size: $font-size;
+	}
+}
+@media screen and (max-width: 680px) {
+	/*Header with button*/
+
+	/*Table*/
+
+
+	.dataTables_length,
+	.dataTables_wrapper {
+	  	tfoot {
+		  	display: none;
+		}
+		select,
+		input {
+			height: 20px;
+		}
+	  	input {
+		  	width: 60px;
+		}
+
+	}
+
+}
+@media screen and (max-width: 580px) {
+	/*Header with button*/
+
+	/*Table*/
+}
+@media screen and (max-width: 480px) {
+	/*Header with button*/
+
+	/*Table*/
+}
+@media screen and (max-width: 380px) {
+	/*Header with button*/
+
+	/*Table*/
+	.adminButton {
+		flex-direction: column;
+	  	justify-content: center;
+	  	align-items: center;
+	  	&__item {
+		  	&:first-child {
+			  	margin-bottom: 10px;
+			}
+		}
+	}
+}
+@media screen and (max-width: 320px) {}

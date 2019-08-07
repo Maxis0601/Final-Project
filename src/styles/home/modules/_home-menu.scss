@@ -7,8 +7,10 @@
   	display: none;
 }
 
-.menu-checkbox {
-  	display: none;
+.menu-button::after {
+  content: '\2630';
+  text-decoration: none;
+  font-size: $font-size*3;
 }
 
 .homeMenu {

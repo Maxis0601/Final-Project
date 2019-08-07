@@ -45,6 +45,16 @@ $task( 'default:init', () =>
         }) )
         .pipe($sourcemaps.write())
         .pipe($trg( 'public/scripts/')),
+    $src( 'src/scripts/jquery/jq-script.js')
+        .pipe($rigger())
+        .pipe($sourcemaps.init())
+        .pipe($uglify())
+        .pipe( $rename({
+            basename: 'jquery-script',
+            suffix: '.min'
+        }) )
+        .pipe($sourcemaps.write())
+        .pipe($trg( 'public/scripts/')),
     $src ('src/img/**/*.*')
         .pipe($imagemin({
             progressive: true,
@@ -59,6 +69,7 @@ $task( 'default:watch', () =>
     $watch( 'src/**/*.html', $series( 'default:init' ) ),
     $watch(  'src/styles/**/*.scss', $series( 'default:init' ) ),
     $watch(  'src/scripts/**/*.js', $series( 'default:init' ) ),
+    $watch(  'src/scripts/jquery/**/*.js', $series( 'default:init' ) ),
     $watch(  'src/img/**/*.*', $series( 'default:init' ) )
 );
 
