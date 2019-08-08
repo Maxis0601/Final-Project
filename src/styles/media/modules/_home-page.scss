@@ -16,6 +16,10 @@
 		}
 	}
 
+  	/*About*/
+
+
+
   	/*Contact*/
 
 	.contact {
@@ -101,6 +105,9 @@
 		}
 	}
 
+  	/*About*/
+
+
   	/*Contact*/
 
 	.contactWrapper {
@@ -152,6 +159,15 @@
 		  font-size: $font-size*2;
 	}
 
+  	/*About*/
+
+	.benefits {
+		&__picture {
+		 display: none;
+		}
+
+	}
+
   	/*Contact*/
 
   	.contact {
@@ -171,6 +187,16 @@
 }
 
 @media screen and (max-width: 680px) {
+
+  	/*About*/
+
+	.benefits {
+		&__header {
+			font-size: $font-size + $font-size/2;
+		  	margin: $margin/2 0;
+		}
+
+	}
 
   	/*Contact*/
 
@@ -199,6 +225,18 @@
 		h1 {
 		  font-size: $font-size*5;
 		}
+	}
+
+  	/*About*/
+
+	.benefits {
+		&__description {
+		  	font-size: $font-size - $font-size/4;
+		}
+		&__header {
+		  	margin: $margin/4 0;
+		}
+
 	}
 
   	/*Contact*/
@@ -238,7 +276,19 @@
 		}
 	}
 
+  	/*About*/
+
+  /*About*/
+
+	.benefits {
+		&__item {
+		  	padding: $padding/2;
+		}
+
+	}
+
   	/*Contact*/
+
 
 	.contact {
 	  	width: 60%;
@@ -258,6 +308,20 @@
 		.getStarted {
 			width: 50%;
 			font-size: $font-size;
+		}
+	}
+}
+
+@media screen and (max-width: 380px) {
+  	/*About*/
+
+	.benefits {
+		&__item {
+		  	padding: $padding/4;
+		}
+	  	&__header {
+		  	font-size: $font-size;
+		  	margin: $margin/4 0;
 		}
 	}
 }
