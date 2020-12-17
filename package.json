@@ -13,7 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "datatables": "^1.10.18",
-    "datatables.net": "^1.10.19",
+    "datatables.net": "^1.10.22",
     "gulp": "^4.0.2",
     "gulp-autoprefixer": "^6.1.0",
     "gulp-concat": "^2.6.1",
